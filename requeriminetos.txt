@@ -1,0 +1,36 @@
+CARRITO DE COMPRAS
+Para resolver este ejercicio, anteriormente debe haber revisado la lectura y los videos del Curso
+Fundamentos de Programación Básica en JavaScript.
+
+EJERCICIO:
+
+1.- Lee atentamente el siguiente enunciado:
+        Imagina que estás construyendo una aplicación para que los usuarios gestionen su compra de
+        supermercado. Deberás implementar un sistema que permita agregar productos al carrito, ver el total de
+        la compra, aplicar descuentos y finalizar la compra.
+
+2.- Desarrolla el código necesario para resolver el ejercicio considerando los siguientes requerimientos:
+
+        • Crea una clase Producto con los atributos ‘nombre’ y ‘precio’. (2 puntos)
+
+        • Crea la clase Carrito que tenga como atributo un arreglo para almacenar los productos
+        seleccionados. (2 puntos)
+
+        • Crea una función que permita agregar productos al carrito. (3 puntos)
+
+        • Crea una función que permita calcular el total de la compra. (2 puntos)
+
+        • Crea una función que permita finalizar la compra. (2 puntos)
+
+        • Crea una función que permita mostrar los detalles de la compra. (2 puntos)
+
+        • Valida que los datos que se ingresen correspondan con los productos vendidos y, de lo contrario,
+        vuelve a solicitar al usuario que ingrese la información hasta que sea correcta. (2 puntos)
+
+        • Permite que el usuario siga agregando productos al carrito hasta que decida no continuar
+        agregando más. (3 puntos).
+
+        • Verifica que código esté bien estructurado, siga buenas prácticas y sea fácil de entender. (2
+        puntos)
+        
+        • Puntaje máximo: 20 puntos
