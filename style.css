@@ -1,0 +1,17 @@
+
+
+.productos-lista {
+    display: flex;
+}
+
+
+.cardsProducto{
+ margin-left: 20;
+}
+.card-body {
+    border: solid 1px;
+   height: 150px;
+   width: 150px;
+   padding: 20px;
+   text-align: center;
+}
