@@ -38,24 +38,61 @@ var root = document.querySelector('#root');
         cards.classList.add('col-12','col-lg-3','col-sm-5','border','border-2','m-1','h-auto','d-lg-inline-block','d-inline-block');
          cards.innerHTML = 
 
-           `              
-           <div class="p-3 cardsProducto" id='name'>           
+           `   
+           <form  id="contactForm" action="">           
+           <div class="p-3 cardsProducto " "id='${productos.id}'>           
               
                     <div class="card-body">
                     
-                    <h5 class="card-title titulos text-center pt-sans-bold fs-3 mt-4">${productos.nombre}</h5>
-                    <p class="card-text mt-5 fs-5 pt-sans-regular">${productos.precio}</p>
-                    <div> <input type="number" id="cantidad"></input> </div>
-                    <button id="btn-add">Agregar</button>
+                    <h5 id="nameproducto" value="${productos.id}" class="card-title titulos text-center pt-sans-bold fs-3 mt-4">${productos.nombre}</h5>
+                    <p id="precioProducto" class="card-text mt-5 fs-5 pt-sans-regular">${productos.precio}</p>
+                    <div><input type="number" value="1" min="1" id="cantidad"></input></div>
+                    <button type="submit" value="submit" onclick="AgregarAlCarrito()" id="btn-add">Agregar</button>
                     </div>
                      
-           </div> `
+           </div></form> `
         root.appendChild(cards) 
         });
 
+//funcion de selecion de datos de producto
+
+//pendiente de resolver obtener datos de form y enviar a carrito
+
+
+function AgregarAlCarrito(){
+var carrito = new Array();
+
+var carritoArray = document.querySelector('contactForm'),
+
+idProductoCarrito = document.querySelector('id')
+
+
+idCantidadProducto = document.querySelector('cantidad')
+
+carrito.push(idProductoCarrito, idCantidadProducto)
+
+
+
+};
+
+
+
+
+  
+
+
+
+
+
+
+
+
+ let carrito =[]
 
     
- 
-   
+ //clase carrito, array de carrito para mostrar los productos seleccionados
+  
     
-   
+
+  
+// agregar producto
