@@ -39,8 +39,8 @@ var root = document.querySelector('#root');
          cards.innerHTML = 
 
            `   
-           <form  id="contactForm" action="">           
-           <div class="p-3 cardsProducto " "id='${productos.id}'>           
+           <div  id="contactForm">           
+           <div class="p-3  cardsProducto" id="${productos.id}" value="${productos.id}">          
               
                     <div class="card-body">
                     
@@ -50,7 +50,7 @@ var root = document.querySelector('#root');
                     <button type="submit" value="submit" onclick="AgregarAlCarrito()" id="btn-add">Agregar</button>
                     </div>
                      
-           </div></form> `
+           </div></div> `
         root.appendChild(cards) 
         });
 
@@ -58,24 +58,16 @@ var root = document.querySelector('#root');
 
 //pendiente de resolver obtener datos de form y enviar a carrito
 
-
-function AgregarAlCarrito(){
-var carrito = new Array();
-
-var carritoArray = document.querySelector('contactForm'),
-
-idProductoCarrito = document.querySelector('id')
-
-
-idCantidadProducto = document.querySelector('cantidad')
-
-carrito.push(idProductoCarrito, idCantidadProducto)
-
-
-
+var carroCompra = [];
+function AgregarAlCarrito(evento){
+    let idProd = document.querySelector('#cardsProducto')
+    let CantidadProducto = document.getElementById('cantidad').value
+    carroCompra.push(evento.target.getAtributte({idProd,CantidadProducto}))
+    
+console.log(carroCompra)
 };
 
-
+console.log(carroCompra)
 
 
   
@@ -87,12 +79,5 @@ carrito.push(idProductoCarrito, idCantidadProducto)
 
 
 
- let carrito =[]
 
-    
- //clase carrito, array de carrito para mostrar los productos seleccionados
-  
-    
 
-  
-// agregar producto
