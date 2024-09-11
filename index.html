@@ -1,32 +1,46 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Tienda</title>
-
 
 </head>
 <body>
-    <h1>Tienda</h1>
+    <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-8 row"></main>
+            <div id="myModal" class="modal">
 
-    <section>
-        
-        <h2> Prductos</h2>        
-
-        <section class="productos-lista" id="root"> </section>
-
-    
-<aside>
-    <h2>Carro de Compras</h2>
-
-
-</aside>
-    </section>
-
-<script src="/productos.js"></script>
+                <!-- Modal content -->
+                <div class="modal-content">
+                <p>¿Deseas Seguir Comprando? Dale a Continuar o finaliza tu compra Dale al verde!</p>
+                 
+                  <button class="close btn btn-danger w-25 ">Continuar</button>
+                  <button id="finBtn"onclick="resume()" class="fin btn btn-success w-25 mt-1">Finalizar</button>
+                  
+                </div>
+              
+              </div>
+              
+            <!-- Carrito -->
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span >$</span><span id="total"></span></p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                <button id="fnBtn" class="btn btn-success">Finalizar Compra</button>
+            </aside>
+        </div>
+    </div>
+    <script src="/productos.js"></script>
 </body>
 </html>
